@@ -3,6 +3,7 @@ package com.example.tecnico.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,4 +20,7 @@ public class Medico {
 
     @ManyToOne
     private UnidadeSaude unidadeSaude;
+
+    @OneToMany
+    private List<Agendamento> agendamentos;
 }
